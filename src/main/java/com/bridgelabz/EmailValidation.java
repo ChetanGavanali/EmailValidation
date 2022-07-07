@@ -30,5 +30,8 @@ public class EmailValidation {
 
         email = ".abc@abc.com";
         checkValidEmail(email);
+
+        email = "abc@gmail.com.com";
+        checkValidEmail(email);
     }
-}
+    }
