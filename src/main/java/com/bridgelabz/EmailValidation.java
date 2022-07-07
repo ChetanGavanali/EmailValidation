@@ -25,13 +25,34 @@ public class EmailValidation {
 
         System.out.println(" Welcome To Email Validation Program");
 
-        String email = "abc.xyz@bridgelabz.co.in";
-        checkValidEmail(email);
+        System.out.println(" Valid Emails ");
 
-        email = ".abc@abc.com";
+        String email = "abc@bridgelabz.co.in";
         checkValidEmail(email);
 
         email = "abc@gmail.com.com";
         checkValidEmail(email);
+
+        email = "abc@yahoo.com";
+        checkValidEmail(email);
+
+        email = "abc@1.com";
+        checkValidEmail(email);
+
+        System.out.println(" Invalid Emails ");
+
+        email = ".abc@abc.com";
+        checkValidEmail(email);
+
+        email = "abc";
+        checkValidEmail(email);
+
+        email = "abc@.com.my";
+        checkValidEmail(email);
+
+        email = "abc@abc@gmail.com";
+        checkValidEmail(email);
+
     }
+
     }
