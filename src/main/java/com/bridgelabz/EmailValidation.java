@@ -7,7 +7,7 @@ public class EmailValidation {
     public static void checkValidEmail(String email){
 
         boolean isEmail;
-        String emailRegex = "^[a-zA-Z][.@a-zA-Z]*$";
+        String emailRegex = "^[a-zA-Z]+[a-zA-Z0-9]*[- . + _]?[a-zA-Z0-9]+[@]{1}[a-z0-9]+[.]{1}[.a-z]*$";
         Pattern patternObject = Pattern.compile(emailRegex);
         if (email == null) {
             isEmail = false;
@@ -39,6 +39,24 @@ public class EmailValidation {
         email = "abc@1.com";
         checkValidEmail(email);
 
+        email = "abc-100@yahoo.com";
+        checkValidEmail(email);
+
+        email = "abc.100@yahoo.com";
+        checkValidEmail(email);
+
+        email = "abc111@abc.com";
+        checkValidEmail(email);
+
+        email = "abc-100@abc.net";
+        checkValidEmail(email);
+
+        email = "abc.100@abc.com.au";
+        checkValidEmail(email);
+
+        email = "abc+100@gmail.com";
+        checkValidEmail(email);
+
         System.out.println(" Invalid Emails ");
 
         email = ".abc@abc.com";
@@ -53,6 +71,14 @@ public class EmailValidation {
         email = "abc@abc@gmail.com";
         checkValidEmail(email);
 
-    }
+        email = "abc()*@gmail.com";
+        checkValidEmail(email);
+
+        email = "abc..2002@gmail.com";
+        checkValidEmail(email);
+
+        email = "abc.@gmail.com";
+        checkValidEmail(email);
 
     }
+}
