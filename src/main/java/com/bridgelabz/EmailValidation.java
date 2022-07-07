@@ -27,6 +27,7 @@ public class EmailValidation {
 
         System.out.println(" Valid Emails ");
 
+
         String email = "abc@bridgelabz.co.in";
         checkValidEmail(email);
 
